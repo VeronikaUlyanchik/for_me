@@ -1,0 +1,116 @@
+.titles , .container {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+}
+.titles {
+    font-size: 15px;
+    color: white;
+    font-weight: 700;
+    background-color: #1976D2;
+}  
+div.container:hover {
+    background-color: #1976D2;  
+    color: white;
+}
+div.titles div {
+    border: 1px solid white;
+    text-align: center;
+    cursor: pointer;
+}
+div.container div {
+    border: 1px solid white;
+    text-align: center;
+    cursor: pointer;
+}
+.personContainer {
+    display: flex;
+    flex-direction: column;
+}
+div.asc img {
+    transform: rotate(180deg);
+}
+div.asc span{
+    position: relative;
+    top: 5px;
+}
+.personInfoContainer {
+    border: 1px solid;
+    margin: auto;
+    border-radius: 15px;
+    width: 400px;
+    padding: 20px;
+    background-color: #1976D2;  
+    color: white;
+    font-size: 15px;
+}
+div.personInfoContainer p:first-child{
+    font-weight: 900;
+    font-size: 20px;
+}
+.pagination-button {
+    border: none;
+    background-color: #BBDEFB;
+    width: 40px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.selected {
+    background-color: #1976d2;
+}
+.inputSearchContainer , .buttonFilterByState {
+    font-size: 17px;
+    margin: 20px 20px;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 5px;
+}
+input {
+    outline:none;
+    border: none;
+    background-color: #1976d2;
+    font-size: 15px;
+    padding: 2px;
+    border-radius: 10px;
+}
+.setectItemField {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 20px;
+}
+.mainTable {
+    width: 80%;
+    background-color:#BBDEFB ;
+}
+.buttonField {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+option{
+    font-size: 15px;
+    color: white;
+}
+select, #resetFilter {
+    background-color: #3366CC;
+    margin: 20px 20px;
+    color: white;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
+}
+#resetFilter:active {
+    font-size: 13px;
+}
+#previous, #next {
+    background-color: #BBDEFB;
+    width: 70px;
+    border-radius: 45px;
+    border: none;
+    cursor: pointer;
+}
+
