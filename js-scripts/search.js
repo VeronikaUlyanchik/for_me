@@ -6,20 +6,22 @@ const inputContainer = document.getElementById('input')
 function onSearchingChange(InputValue) {
     
     selectbyStateBtn.options[0].selected = 'selected';
-    [selectedInputFirst, selectedInputSec] = InputValue.split(' ');
-    if (typeof selectedInputSec === 'undefined') {
-        selectedInputSec = 'lastName'
-    }
+    const inputArray = InputValue.toLocaleLowerCase().replace(/\s/g, '');
+    
     let found = item.filter(function(i) {
          
-        if ((selectedInputSec.toUpperCase() === i.firstName.toUpperCase()) || (selectedInputSec.toUpperCase() === i.lastName.toUpperCase()
-        || (selectedInputFirst.toUpperCase() === i.firstName.toUpperCase()) || (selectedInputFirst.toUpperCase() === i.lastName.toUpperCase())
-        )) {
+        if (( i.firstName.toLocaleLowerCase().includes(inputArray)== 1) ||
+        (i.lastName.toLocaleLowerCase().includes(inputArray)== 1) || 
+        ((i.firstName.toLocaleLowerCase()+i.lastName.toLocaleLowerCase()).includes(inputArray)==1) ||
+        ((i.lastName.toLocaleLowerCase()+i.firstName.toLocaleLowerCase()).includes(inputArray)==1))
+         {
             return true
         }
         else 
         personContainer.innerHTML = '';
+        
     })
+
     if (InputValue.length==0) {
         getPersonForView(item)
     } else {
