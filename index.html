@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Task</title>
+</head>
+<body>
+
+        <div class="setectItemField">
+            <div class="inputSearchContainer"><label for="input">Search by name:</label><input type="text" id="input" oninput="onSearchingChange(input.value)"></div>
+            <select id="selectByState" onchange="selectbyState(selectByState.value)"></select>
+            <button id="resetFilter" onclick="resetFilter()">Reset Filter</button>
+        </div>
+        <div class="mainTable">
+            <div class="titles">
+                <div class="asc" onclick="sortId()" id="idDiv">id <span><img src="assets/expand_less_black_24dp.svg" alt=""></span> </div>
+                <div class="asc" onclick="sortText('firstName')"  id="firstName" >First Name <span><img src="assets/expand_less_black_24dp.svg" alt=""></span></div>
+                <div class="asc" onclick="sortText('lastName')" id="lastName" >Last Name <span><img src="assets/expand_less_black_24dp.svg" alt=""></span></div>
+                <div class="asc" onclick="sortText('email')" id="email" >Email <span><img src="assets/expand_less_black_24dp.svg" alt=""></span></div>
+                <div class="asc" onclick="sortText('phone')" id="phone" >Phone <span><img src="assets/expand_less_black_24dp.svg" alt=""></span></div>
+                <div class="asc" onclick="sortState('state')" id="state" >State <span><img src="assets/expand_less_black_24dp.svg" alt=""></span></div>
+            </div>
+            <div class="personContainer" id="personContainer"></div>
+        </div>
+
+        <div class="buttonField">
+            <button id="previous" onclick="renderView(startIndex-itemsPerPage)">Previous</button>
+            <div id="paginationButtonContainer"></div>
+            <button id="next" value="0" onclick="renderView(startIndex+itemsPerPage)">Next</button>
+        </div>
+
+<div class="personInfoContainer" id="personInfoContainer">
+        <p>Profile info:</p>
+        <p>Selected profile:</p>
+        <p>Descriprion:</p>
+        <p>Adress:</p>
+        <p>City:</p>
+        <p>State:</p>
+        <p>Index:</p>
+</div>
+
+    <script src="js-scripts/array.js"></script>
+    <script src="js-scripts/generateList.js"></script>
+    <script src="js-scripts/pagination.js"></script>
+    <script src="js-scripts/sort.js"></script>
+    <script src="js-scripts/search.js"></script>
+    <script src="js-scripts/select.js"></script>
+</body>
+</html>
