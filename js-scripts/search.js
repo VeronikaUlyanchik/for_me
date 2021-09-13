@@ -1,5 +1,3 @@
-let selectedInputFirst = 'firstName';
-let selectedInputSec = 'lastName';
 const inputContainer = document.getElementById('input')
 
 
@@ -9,7 +7,7 @@ function onSearchingChange(InputValue) {
     const inputArray = InputValue.toLocaleLowerCase().replace(/\s/g, '');
     
     let found = item.filter(function(i) {
-         
+
         if (( i.firstName.toLocaleLowerCase().includes(inputArray)== 1) ||
         (i.lastName.toLocaleLowerCase().includes(inputArray)== 1) || 
         ((i.firstName.toLocaleLowerCase()+i.lastName.toLocaleLowerCase()).includes(inputArray)==1) ||
