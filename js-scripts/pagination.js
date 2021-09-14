@@ -1,8 +1,9 @@
 const previous= document.getElementById('previous');
 const next= document.getElementById('next');
 
+
 renderView(startIndex)
-disableBtn(startIndex)
+
 
 function renderView(newIndex) {
         startIndex= newIndex

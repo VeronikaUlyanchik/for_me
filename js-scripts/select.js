@@ -16,7 +16,7 @@ function createSelect() {
     selectbyStateBtn.innerHTML = disableOption+option;
     
 }
-createSelect()
+
 
 function selectbyState(stateSelect) {
 

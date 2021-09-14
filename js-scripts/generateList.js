@@ -3,12 +3,10 @@ const personInfoContainer = document.getElementById('personInfoContainer');
 const dataContainer = document.getElementById('dataContainer');
 
 const paginationButtonContainer = document.getElementById('paginationButtonContainer');
-let startIndex = parseInt(localStorage.getItem('startIndex')) || 0;
 let itemsPerPage = 20;
 let personArray;
 
 
-getPersonForView(item)
 
 function getPersonForView(item) {
      personArray = item
