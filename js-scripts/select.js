@@ -6,7 +6,7 @@ function createSelect() {
     let result= item.map(i => i.adress.state)
 
     let set = new Set(result);
-    let arrFromSet = Array.from(set)
+    let arrFromSet = Array.from(set).sort()
     let option = '';
     for (let i = 0; i < set.size; i++) {
         option += `

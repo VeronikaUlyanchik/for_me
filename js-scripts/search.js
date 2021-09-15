@@ -3,9 +3,9 @@ let found;
 let filter;
 
 function onSearchingChange(InputValue) {
-        filter=item
-    if (selectbyStateBtn.options[0].selected === 'selected') {
         filter=stateSelected
+    if (selectbyStateBtn.options[0].selected) {
+        filter=item
     }
     const inputArray = InputValue.toLocaleLowerCase().replace(/\s/g, '');
     
