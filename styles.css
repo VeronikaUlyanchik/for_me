@@ -1,6 +1,6 @@
 .titles , .container {
     display: grid;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(6,calc(100%/6));
 }
 .titles {
     font-size: 15px;
@@ -21,6 +21,8 @@ div.container div {
     border: 1px solid white;
     text-align: center;
     cursor: pointer;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 .personContainer {
     display: flex;

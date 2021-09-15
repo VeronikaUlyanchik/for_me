@@ -1,5 +1,6 @@
 const selectbyStateBtn = document.getElementById('selectByState');
-
+let search;
+let stateSelected 
 
 function createSelect() {
     let result= item.map(i => i.adress.state)
@@ -19,16 +20,19 @@ function createSelect() {
 
 
 function selectbyState(stateSelect) {
-
-    let stateSelected = item.filter(function(i){
+    search = item;
+if (inputContainer.value !== ''){
+    search= found;
+}
+    stateSelected = search.filter(function(i){
         if (stateSelect === i.adress.state) {
             return true
         }
     })
+    inputContainer.value === '';
     renderView(0)
     getPersonForView(stateSelected);
     disableBtn(startIndex);
-    inputContainer.value = '';
 }
 
 function resetFilter(){
