@@ -2,29 +2,28 @@ const inputContainer = document.getElementById('input')
 let found;
 let filter;
 
-function onSearchingChange(InputValue) {
+function onSearchingChange(inputValue) {
         filter=stateSelected
     if (selectbyStateBtn.options[0].selected) {
         filter=item
     }
-    const inputArray = InputValue.toLocaleLowerCase().replace(/\s/g, '');
-    
-    found = filter.filter(function(i) {
+    const inputArray = inputValue.split(' ');
+    for (let a=0; a<inputArray.length; a++) {
 
-        if (( i.firstName.toLocaleLowerCase().includes(inputArray)== 1) ||
-        (i.lastName.toLocaleLowerCase().includes(inputArray)== 1) 
-        || 
-        ((i.firstName.toLocaleLowerCase()+i.lastName.toLocaleLowerCase()).includes(inputArray)==1) ||
-        ((i.lastName.toLocaleLowerCase()+i.firstName.toLocaleLowerCase()).includes(inputArray)==1))
+   found = filter.filter(function(i) {
+
+        if ((( i.firstName.toLocaleLowerCase().includes(inputArray[a].toLocaleLowerCase())== 1) ||
+        (i.lastName.toLocaleLowerCase().includes(inputArray[a].toLocaleLowerCase())== 1)) && 
+        (i.firstName.toLocaleLowerCase()+i.lastName.toLocaleLowerCase()).includes(inputArray[0].toLocaleLowerCase())==1)
         {
             return true
         }
-        else 
+        else {
         personContainer.innerHTML = '';
-        
-    })
+        }
+    })}
 
-    if (InputValue.length==0) {
+    if (inputValue.length==0) {
         getPersonForView(item)
         selectbyStateBtn.options[0].selected = 'selected'
     } else {
