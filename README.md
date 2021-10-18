@@ -1,1 +1,2 @@
-https://veronikaulyanchik.github.io/for_me/
+https://veronikaulyanchik.github.io/table/
+ Таблица с пагинацией, поиском, фильтром, инфа из API.
